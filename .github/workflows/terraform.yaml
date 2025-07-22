@@ -1,0 +1,13 @@
+name: "Terraform Infrastructure Change Management Pipeline with GitHub Actions"
+on:
+ push:
+   branches:
+   - main
+
+jobs:
+ terraform:
+   name: "Terraform Infrastructure Change Management"
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout the repository to the runner
+       uses: actions/checkout@v2
