@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   plan:
-    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'terraform plan') }}
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'plan') }}
     runs-on: ubuntu-latest
     name: Create Terraform plan
     env:
